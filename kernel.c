@@ -5,23 +5,23 @@ kmain()
 {
 	char exited = '0';
 
-       clearScreen();
-       print("Welcome to AwesomeOS operating system\nPlease enter a command\n");
-       while (1)
-       {
+    clearScreen();
+    print("Welcome to AwesomeOS operating system\nPlease enter a command\n");
+    while (1)
+    {
 		if(exited != 1)
 		{
-                	print("\nAWESOMEOS> ");                
+			print("\nAWESOMEOS> ");                
 		
-                	string ch = readStr();
-                	if(strEql(ch,"cmd"))
-                	{
-                        	print("\nYou are already in cmd.\n");
-                	}
-                	else if(strEql(ch,"clear"))
-                	{
-                        	clearScreen();
-                	}
+			string ch = readStr();
+            if(strEql(ch,"cmd"))
+            {
+				print("\nYou are already in cmd.\n");
+            }
+            else if(strEql(ch,"clear"))
+            {
+				clearScreen();
+            }
 			else if(strEql(ch, "help"))
 			{
 				print("\n+------------------+\n");
@@ -35,13 +35,12 @@ kmain()
 				exited = 1;
 				print("You have now exited AwesomeOS. Please turn off your computer.\n"); 
 			}
-                	else
-                	{
-                	        print("\nBad command!\n");
-                	}
+			else
+			{
+				print("\nBad command!\n");
+			}
                 
-                	print("\n");
-		}    
-       }
-        
+            print("\n");
+		} 
+	}    
 }
